@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nâng Cấp Trải Nghiệm VIP - Cùng Annie Mỹ Quyên</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://stcdn.leadconnectorhq.com/funnel/icon/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts: Inter & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandNavy: '#012c56',
+            brandDarkNavy: '#011c38',
+            brandDeepDark: '#01091e',
+            brandGreen: '#22c55e',
+            brandGreenHover: '#16a34a',
+            brandRed: '#b91c1c',
+            brandGold: '#f59e0b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'Inter', 'sans-serif'],
+          },
+          animation: {
+            'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-soft': 'bounceSoft 2s ease-in-out infinite',
+          },
+          keyframes: {
+            pulseGlow: {
+              '0%, 100%': {
+                transform: 'scale(1)',
+                boxShadow: '0 0 25px rgba(34, 197, 94, 0.6)'
+              },
+              '50%': {
+                transform: 'scale(1.025)',
+                boxShadow: '0 0 35px rgba(34, 197, 94, 0.9)'
+              }
+            },
+            bounceSoft: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-6px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #011c38;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #22c55e;
+      border-radius: 4px;
+    }
+
+    /* Gradient Text */
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-green {
+      background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Button Pulse Glow */
+    .btn-vip-glow {
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.45);
+      transition: all 0.3s ease;
+    }
+    .btn-vip-glow:hover {
+      box-shadow: 0 6px 30px rgba(34, 197, 94, 0.75);
+      transform: translateY(-2px);
+    }
+
+    /* Modal Backdrop Blur */
+    .modal-backdrop {
+      background: rgba(1, 9, 30, 0.85);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="bg-[#0b1325] text-slate-100 font-sans antialiased selection:bg-brandGreen selection:text-white">
+
+  <!-- ============================================== -->
+  <!-- 1. TOP URGENCY WARNING BAR                     -->
+  <!-- ============================================== -->
+  <header class="sticky top-0 z-40 bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white shadow-lg border-b border-red-500/30">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-center text-sm md:text-base font-semibold">
+      <div class="flex items-center justify-center gap-2 mx-auto sm:mx-0">
+        <i class="fa-solid fa-triangle-exclamation text-amber-300 animate-pulse text-lg"></i>
+        <span>KHÔNG THOÁT KHỎI TRANG NÀY, MỌI QUÀ TẶNG SẼ BIẾN MẤT...</span>
+      </div>
+      <div class="flex items-center gap-2 mx-auto sm:mx-0 bg-red-950/60 px-3 py-1 rounded-full border border-red-400/40 text-xs md:text-sm">
+        <i class="fa-regular fa-clock text-amber-300"></i>
+        <span>Ưu đãi đóng lại sau: <span id="top-timer" class="font-mono font-bold text-amber-300">14:59</span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- 2. HERO SECTION                                -->
+  <!-- ============================================== -->
+  <section class="relative bg-gradient-to-b from-brandDarkNavy via-brandNavy to-[#0b1933] pt-12 pb-16 px-4 md:px-8 border-b border-blue-900/40 overflow-hidden">
+    <!-- Glow Background Accents -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-20 right-[-100px] w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      
+      <!-- Sub-headline Pill & Representative Badge -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-amber-300 text-xs md:text-sm font-bold uppercase tracking-wider shadow-sm">
+          <i class="fa-solid fa-crown text-amber-400"></i>
+          <span>CƠ HỘI CHƯA BAO GIỜ THẤY TRƯỚC ĐÂY, KHÔNG CÓ Ở BẤT CỨ ĐÂU KHÁC</span>
+        </div>
+        
+        <div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-slate-900/80 border border-emerald-500/40 shadow-sm">
+          <img src="images/annie_my_quyen.jpg" alt="Annie Mỹ Quyên" class="w-7 h-7 rounded-full object-cover border border-emerald-400">
+          <span class="text-xs text-slate-200 font-semibold">Cố Vấn: <strong class="text-emerald-400">Annie Mỹ Quyên</strong></span>
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black text-white leading-tight md:leading-[1.15] mb-6">
+        Đường nhanh nhất đến <span class="text-emerald-400 underline decoration-emerald-500/50 decoration-wavy decoration-2">30 triệu/ tháng:</span><br>
+        Khám phá cách nhận tất cả <span class="text-gradient-gold">TÀI SẢN thử thách</span> của chúng tôi.
+      </h1>
+
+      <!-- Hero Mockup Image -->
+      <div class="my-8 relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/30 to-blue-500/30 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition duration-700"></div>
+        <img 
+          src="images/hero.png" 
+          alt="Gói VIP Thử Thách 30 Triệu - Annie Mỹ Quyên" 
+          class="relative w-full max-w-2xl mx-auto rounded-xl shadow-2xl border border-blue-400/20 object-contain hover:scale-[1.01] transition-transform duration-300"
+        />
+      </div>
+
+      <!-- Hero CTA Button -->
+      <div class="mt-6 flex flex-col items-center">
+        <button 
+          onclick="openCheckoutModal()" 
+          class="w-full sm:w-auto px-8 py-5 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-display font-extrabold text-xl sm:text-2xl rounded-xl shadow-xl animate-pulse-glow btn-vip-glow border border-emerald-300/40 flex items-center justify-center gap-3 transition-all cursor-pointer"
+        >
+          <i class="fa-solid fa-circle-check text-2xl text-white"></i>
+          <span>CÓ, Tôi muốn nâng cấp trải nghiệm VIP!</span>
+          <i class="fa-solid fa-arrow-right text-lg"></i>
+        </button>
+        <p class="text-xs sm:text-sm text-emerald-300/90 mt-3 font-medium flex items-center gap-1.5">
+          <i class="fa-solid fa-lock text-emerald-400 text-xs"></i>
+          Bấm nút màu xanh lá để lấy toàn bộ VIP trước khi toàn bộ biến mất mãi mãi
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 3. VIP SUMMARY STACK BOX                       -->
+  <!-- ============================================== -->
+  <section class="py-16 px-4 md:px-8 bg-[#0a162d] relative">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="bg-gradient-to-b from-[#0f244a] to-[#0a1b38] rounded-2xl p-6 sm:p-10 border-2 border-emerald-500/40 shadow-2xl relative overflow-hidden">
+        
+        <!-- Header Badge -->
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-black text-white uppercase tracking-tight">
+            KHI BẠN NÂNG CẤP LÊN VIP,<br class="hidden sm:inline"> BẠN SẼ NHẬN ĐƯỢC:
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Deliverables Checklist -->
+          <div class="lg:col-span-7 space-y-4">
+            
+            <!-- Item 1 -->
+            <div class="flex items-start gap-3.5 bg-blue-950/50 p-3.5 rounded-xl border border-blue-800/40 hover:border-emerald-500/40 transition">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5 shrink-0"></i>
+              <div class="text-sm sm:text-base">
+                <span class="font-bold text-white">PHÒNG THÍ NGHIỆM THỬ THÁCH 30 TRIỆU</span> TRỰC TIẾP VỚI "ANNIE MỸ QUYÊN" VÀ KHÁCH MỜI ĐẶC BIỆT 
+                <span class="block text-emerald-400 font-semibold text-xs sm:text-sm mt-0.5">(trị giá: 3.970.000 vnđ)</span>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex items-start gap-3.5 bg-blue-950/50 p-3.5 rounded-xl border border-blue-800/40 hover:border-emerald-500/40 transition">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5 shrink-0"></i>
+              <div class="text-sm sm:text-base">
+                <span class="font-bold text-white">BÍ MẬT Mô Hình Tiền 30 Triệu</span>, quá ít người biết về bí mật của tiền bạc không liên quan tới nỗ lực....
+                <span class="block text-emerald-400 font-semibold text-xs sm:text-sm mt-0.5">(trị giá: 1.979.000 vnđ)</span>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex items-start gap-3.5 bg-blue-950/50 p-3.5 rounded-xl border border-blue-800/40 hover:border-emerald-500/40 transition">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5 shrink-0"></i>
+              <div class="text-sm sm:text-base">
+                <span class="font-bold text-white">Bài tập VIP NGÀY #1</span> thử thách 30 triệu
+                <span class="block text-emerald-400 font-semibold text-xs sm:text-sm mt-0.5">(trị giá: 979.000 vnđ)</span>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex items-start gap-3.5 bg-blue-950/50 p-3.5 rounded-xl border border-blue-800/40 hover:border-emerald-500/40 transition">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5 shrink-0"></i>
+              <div class="text-sm sm:text-base">
+                <span class="font-bold text-white">Bài tập VIP NGÀY #2</span> thử thách 30 triệu
+                <span class="block text-emerald-400 font-semibold text-xs sm:text-sm mt-0.5">(trị giá: 979.000 vnđ)</span>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="flex items-start gap-3.5 bg-blue-950/50 p-3.5 rounded-xl border border-blue-800/40 hover:border-emerald-500/40 transition">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5 shrink-0"></i>
+              <div class="text-sm sm:text-base">
+                <span class="font-bold text-white">4 TUẦN COACHING CHIẾN LƯỢC TRỰC TIẾP</span> TRIỂN KHAI
+                <span class="block text-emerald-400 font-semibold text-xs sm:text-sm mt-0.5">(trị giá: 5.979.000 vnđ)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bundle Image & Price Anchor -->
+          <div class="lg:col-span-5 flex flex-col items-center justify-center text-center">
+            
+            <img 
+              src="images/bundle-summary.png" 
+              alt="Tổng hợp quà tặng gói VIP" 
+              class="w-full max-w-sm rounded-xl drop-shadow-2xl hover:scale-105 transition-transform duration-300 mb-6"
+            />
+
+            <!-- Price Comparison Tag -->
+            <div class="w-full bg-slate-900/90 rounded-2xl p-5 border border-emerald-500/50 shadow-inner">
+              <div class="text-sm text-slate-400 font-medium">
+                TỔNG GIÁ TRỊ THỰC TẾ: 
+                <span class="line-through text-red-400 font-bold ml-1">13.797.000 VNĐ</span>
+              </div>
+              <div class="mt-2 text-xs uppercase tracking-wider text-emerald-400 font-bold">
+                HÔM NAY, VỚI KHOẢN ĐẦU TƯ MỘT LẦN CHỈ VỚI:
+              </div>
+              <div class="text-4xl sm:text-5xl font-display font-black text-amber-300 mt-1">
+                79.000 <span class="text-2xl font-bold">VNĐ</span>
+              </div>
+              <div class="inline-block bg-red-600 text-white text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full mt-2">
+                TIẾT KIỆM HƠN 99% - CHỈ CÒN DUY NHẤT HÔM NAY
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Section CTA Button -->
+        <div class="mt-10 text-center">
+          <button 
+            onclick="openCheckoutModal()" 
+            class="w-full md:w-auto px-8 py-5 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-display font-extrabold text-lg sm:text-xl rounded-xl shadow-xl animate-pulse-glow btn-vip-glow border border-emerald-300/40 inline-flex items-center justify-center gap-3 transition-all cursor-pointer"
+          >
+            <i class="fa-solid fa-check-double text-xl"></i>
+            <span>CÓ, TÔI MUỐN NÂNG CẤP LÊN VIP, BÍ MẬT THỬ THÁCH 30 TRIỆU</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 4. DETAILED 5 VALUE PILLARS (DEEP DIVE)        -->
+  <!-- ============================================== -->
+  <section class="py-20 px-4 md:px-8 bg-[#071022]">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs sm:text-sm font-bold tracking-widest text-emerald-400 uppercase mb-2">
+          CHI TIẾT ĐẶC QUYỀN
+        </h2>
+        <h3 class="text-2xl sm:text-3xl md:text-4xl font-display font-black text-white leading-tight">
+          SAU ĐÂY LÀ MỌI THỨ BẠN SẼ NHẬN ĐƯỢC KHI<br>
+          <span class="text-gradient-green">NÂNG CẤP LÊN TRẢI NGHIỆM VIP:</span>
+        </h3>
+      </div>
+
+      <!-- The 5 Stack Items -->
+      <div class="space-y-16">
+
+        <!-- Item 1: PHÒNG THÍ NGHIỆM -->
+        <div class="bg-gradient-to-r from-[#0d1d3a] to-[#0a1830] rounded-2xl p-6 sm:p-8 border border-blue-900/60 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-5 order-2 md:order-1 text-center">
+            <img 
+              src="images/feature-1-hotseat.png" 
+              alt="Phòng thí nghiệm thử thách 30 triệu" 
+              class="w-full max-w-xs mx-auto rounded-xl drop-shadow-xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="md:col-span-7 order-1 md:order-2 space-y-4">
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full uppercase">
+              <i class="fa-solid fa-gift"></i> Quà Tặng Độc Quyền #1
+            </div>
+            <h4 class="text-xl sm:text-2xl font-display font-bold text-white leading-snug">
+              PHÒNG THÍ NGHIỆM THỬ THÁCH 30 TRIỆU TRỰC TIẾP VỚI "ANNIE MỸ QUYÊN" VÀ KHÁCH MỜI ĐẶC BIỆT VIP
+            </h4>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Bạn sẽ được mời tham gia cùng Annie Mỹ Quyên và các khách mời đặc biệt ngay sau khi chương trình thử thách 2 ngày trên Zoom kết thúc. Đây là phần thực hành ghế nóng 60 phút trên Zoom buổi 3-4 mà người bình thường không được có mặt. Toàn bộ hậu trường công khai và bạn được gặp gỡ những người cuồng nhiệt giống bạn.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <div class="text-sm font-semibold text-slate-400 line-through">(TRỊ GIÁ: 3.979.000 Đ)</div>
+              <button onclick="openCheckoutModal()" class="px-6 py-2.5 bg-brandGreen hover:bg-brandGreenHover text-white font-bold text-sm rounded-lg shadow-md hover:shadow-green-500/50 transition cursor-pointer flex items-center gap-2">
+                <i class="fa-solid fa-check"></i> NHẬN NÓ MIỄN PHÍ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: BÍ MẬT MÔ HÌNH TIỀN -->
+        <div class="bg-gradient-to-r from-[#0a1830] to-[#0d1d3a] rounded-2xl p-6 sm:p-8 border border-blue-900/60 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase">
+              <i class="fa-solid fa-key"></i> Tài Liệu Mật #2
+            </div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">
+              HÃY LÀ NGƯỜI ĐẦU TIÊN NHẬN ĐƯỢC TÀI LIỆU TỐI THƯỢNG BÍ MẬT CỦA TIỀN BẠC TÔI CHƯA TỪNG TIẾT LỘ
+            </div>
+            <h4 class="text-xl sm:text-2xl font-display font-bold text-white leading-snug">
+              BÍ MẬT MÔ HÌNH TIỀN KHÔNG LIÊN QUAN TỚI NỖ LỰC
+            </h4>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Bí mật về TIỀN BẠC... nó chẳng liên quan tới nỗ lực vất vả hay cày cuốc gì cả. Bởi vì tôi đã vất vả cả đời mà không hề có thêm được thu nhập đột phá trong khi sức khỏe thì càng ngày càng kiệt quệ... Cho đến khi tôi được học về <strong>"Mô Hình Tiền"</strong> mọi thứ đã thay đổi chóng mặt...
+            </p>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Tôi sẽ tiết lộ cho bạn bên trong tài liệu kín Mô Hình Tiền, việc của bạn chỉ cần quan sát, áp dụng và làm theo những bước đơn giản, tôi hứa sự nghiệp tài chính của bạn sẽ vượt bậc.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <div class="text-sm font-semibold text-slate-400 line-through">(TRỊ GIÁ: 1.979.000 Đ)</div>
+              <button onclick="openCheckoutModal()" class="px-6 py-2.5 bg-brandGreen hover:bg-brandGreenHover text-white font-bold text-sm rounded-lg shadow-md hover:shadow-green-500/50 transition cursor-pointer flex items-center gap-2">
+                <i class="fa-solid fa-check"></i> NHẬN NÓ MIỄN PHÍ
+              </button>
+            </div>
+          </div>
+          <div class="md:col-span-5 text-center">
+            <img 
+              src="images/feature-2-secret-doc.png" 
+              alt="Bí mật mô hình tiền" 
+              class="w-full max-w-xs mx-auto rounded-xl drop-shadow-xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Item 3: BÀI TẬP VIP NGÀY #1 -->
+        <div class="bg-gradient-to-r from-[#0d1d3a] to-[#0a1830] rounded-2xl p-6 sm:p-8 border border-blue-900/60 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-5 order-2 md:order-1 text-center">
+            <img 
+              src="images/feature-3-exercise-day1.png" 
+              alt="Bài tập VIP Ngày 1" 
+              class="w-full max-w-xs mx-auto rounded-xl drop-shadow-xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="md:col-span-7 order-1 md:order-2 space-y-4">
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full uppercase">
+              <i class="fa-solid fa-list-check"></i> Action Blueprint #3
+            </div>
+            <h4 class="text-xl sm:text-2xl font-display font-bold text-white leading-snug">
+              BÀI TẬP VIP NGÀY #1: THỬ THÁCH 30 TRIỆU
+            </h4>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Không bài tập, không thực hành, không tạo ra kết quả... là không có gì cả. Bạn nhất định phải có bài tập VIP ngày 1, ở bên trong có sẵn phần tóm tắt chiến lược, và check list bài tập dễ hiểu để bạn nắm trọn vẹn những bài học, biết cách hành động tạo ra kết quả ngay lập tức.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <div class="text-sm font-semibold text-slate-400 line-through">(TRỊ GIÁ: 979.000 Đ)</div>
+              <button onclick="openCheckoutModal()" class="px-6 py-2.5 bg-brandGreen hover:bg-brandGreenHover text-white font-bold text-sm rounded-lg shadow-md hover:shadow-green-500/50 transition cursor-pointer flex items-center gap-2">
+                <i class="fa-solid fa-check"></i> NHẬN NÓ MIỄN PHÍ
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: BÀI TẬP VIP NGÀY #2 -->
+        <div class="bg-gradient-to-r from-[#0a1830] to-[#0d1d3a] rounded-2xl p-6 sm:p-8 border border-blue-900/60 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full uppercase">
+              <i class="fa-solid fa-money-bill-trend-up"></i> Khơi Thông Dòng Tiền #4
+            </div>
+            <h4 class="text-xl sm:text-2xl font-display font-bold text-white leading-snug">
+              BÀI TẬP VIP NGÀY #2: THỬ THÁCH 30 TRIỆU
+            </h4>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Nếu không biết tiền đang ở đâu, ai đưa tiền cho mình thì chắc chắn bạn đang bị tảng đá khổng lồ chặn đứng dòng chảy tiền bạc về phía bạn. Bài tập VIP ngày 2 sẽ cho bạn biết chính xác tiền đến từ đâu, ai đưa tiền cho bạn và cần làm gì để có dòng tiền không ngừng tăng.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <div class="text-sm font-semibold text-slate-400 line-through">(TRỊ GIÁ: 979.000 Đ)</div>
+              <button onclick="openCheckoutModal()" class="px-6 py-2.5 bg-brandGreen hover:bg-brandGreenHover text-white font-bold text-sm rounded-lg shadow-md hover:shadow-green-500/50 transition cursor-pointer flex items-center gap-2">
+                <i class="fa-solid fa-check"></i> NHẬN NÓ MIỄN PHÍ
+              </button>
+            </div>
+          </div>
+          <div class="md:col-span-5 text-center">
+            <img 
+              src="images/feature-4-exercise-day2.png" 
+              alt="Bài tập VIP Ngày 2" 
+              class="w-full max-w-xs mx-auto rounded-xl drop-shadow-xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Item 5: 4 TUẦN COACHING -->
+        <div class="bg-gradient-to-r from-[#0d1d3a] to-[#0a1830] rounded-2xl p-6 sm:p-8 border border-blue-900/60 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-5 order-2 md:order-1 text-center">
+            <img 
+              src="images/feature-5-coaching-4weeks.png" 
+              alt="4 tuần coaching trực tiếp" 
+              class="w-full max-w-xs mx-auto rounded-xl drop-shadow-xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="md:col-span-7 order-1 md:order-2 space-y-4">
+            <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold px-3 py-1 rounded-full uppercase">
+              <i class="fa-solid fa-users"></i> Trực Tiếp Với Chuyên Gia #5
+            </div>
+            <h4 class="text-xl sm:text-2xl font-display font-bold text-white leading-snug">
+              4 TUẦN CUỘC GỌI COACHING TRỰC TIẾP QUA ZOOM
+            </h4>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Không gì mạnh mẽ và tốc độ bằng một cuộc gọi trực tiếp, cách giải quyết vấn đề nóng nhanh gọn và hiệu quả. Bạn được hỏi mọi câu hỏi, mọi giải pháp về thử thách 30 triệu, hoàn toàn trực tiếp 4 tuần qua Zoom cực kỳ thân mật cùng với Annie Mỹ Quyên, trong khi người khác phải trả tiền nhiều và đặt lịch hẹn rất lâu để được có mặt.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <div class="text-sm font-semibold text-slate-400 line-through">(TRỊ GIÁ: 5.979.000 Đ)</div>
+              <button onclick="openCheckoutModal()" class="px-6 py-2.5 bg-brandGreen hover:bg-brandGreenHover text-white font-bold text-sm rounded-lg shadow-md hover:shadow-green-500/50 transition cursor-pointer flex items-center gap-2">
+                <i class="fa-solid fa-check"></i> NHẬN NÓ MIỄN PHÍ
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 5. FINAL PUSH / CLOSING CALL TO ACTION         -->
+  <!-- ============================================== -->
+  <section class="py-16 px-4 md:px-8 bg-gradient-to-b from-[#0a162d] to-brandDarkNavy text-center relative overflow-hidden">
+    <!-- Glow -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto relative z-10">
+      
+      <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-bold uppercase mb-6">
+        <i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i>
+        CƠ HỘI ĐỘC QUYỀN MỘT LẦN DUY NHẤT
+      </div>
+
+      <h3 class="text-2xl sm:text-3xl md:text-4xl font-display font-black text-white leading-tight mb-6">
+        ĐIỀU NÀY GIỐNG NHƯ THUÊ TÔI LÀM CỐ VẤN RIÊNG CHO BẠN MÀ KHÔNG CẦN PHẢI TRẢ MỘT KHOẢN TIỀN LỚN!
+      </h3>
+
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+        Khi bạn nói <span class="text-emerald-400 font-bold">"CÓ"</span> ngay bây giờ, bạn sẽ nhận được toàn bộ trải nghiệm VIP chỉ với khoản đầu tư tượng trưng 
+        <span class="text-amber-300 font-black text-xl">79.000 Đ</span> để bạn có thể chiến thắng trong thử thách 30 triệu nhanh hơn!
+      </p>
+
+      <!-- Final CTA Button -->
+      <button 
+        onclick="openCheckoutModal()" 
+        class="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-display font-black text-xl sm:text-2xl rounded-xl shadow-2xl animate-pulse-glow btn-vip-glow border border-emerald-300/40 inline-flex items-center justify-center gap-3 transition-all cursor-pointer"
+      >
+        <i class="fa-solid fa-circle-check text-2xl text-white"></i>
+        <span>CÓ, Tôi muốn nâng cấp trải nghiệm VIP!</span>
+      </button>
+
+      <p class="text-xs sm:text-sm text-slate-400 mt-4 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-lock text-emerald-400"></i>
+        Cam kết bảo mật thông tin • Truy cập ngay sau khi thanh toán
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 6. FOOTER                                      -->
+  <!-- ============================================== -->
+  <footer class="bg-brandDeepDark py-8 px-4 border-t border-slate-800 text-center text-xs sm:text-sm text-slate-500">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <p class="font-medium text-slate-400">
+        anniemiquyen.com - bảo mật - bảo hộ
+      </p>
+      <p>
+        Website này không thuộc Facebook hay được Facebook bảo trợ dưới bất kỳ hình thức nào. FACEBOOK là thương hiệu đã đăng ký của FACEBOOK, Inc.
+      </p>
+      <div class="flex justify-center gap-6 pt-2 text-slate-400">
+        <a href="#" class="hover:text-emerald-400 transition">Điều khoản sử dụng</a>
+        <span>•</span>
+        <a href="#" class="hover:text-emerald-400 transition">Chính sách bảo mật</a>
+        <span>•</span>
+        <a href="#" class="hover:text-emerald-400 transition">Hỗ trợ khách hàng</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- 7. INTERACTIVE CHECKOUT & VIETQR MODAL          -->
+  <!-- ============================================== -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-gradient-to-b from-[#0f244a] to-[#09152b] w-full max-w-lg rounded-2xl border-2 border-emerald-500/50 shadow-2xl overflow-hidden relative my-8 animate-in fade-in zoom-in duration-300">
+      
+      <!-- Close Button -->
+      <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-800 transition z-10 cursor-pointer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="bg-brandNavy/90 px-6 py-4 border-b border-blue-800/60 text-center">
+        <span class="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase px-2.5 py-0.5 rounded-full mb-1">
+          XÁC NHẬN NÂNG CẤP VIP
+        </span>
+        <h3 class="text-xl sm:text-2xl font-display font-black text-white">
+          Trải Nghiệm VIP Thử Thách 30 Triệu
+        </h3>
+        <p class="text-xs text-slate-300 mt-1">
+          Chỉ <span class="text-amber-300 font-bold text-sm">79.000 VNĐ</span> (Tiết kiệm 99% - Trị giá 13.797.000 VNĐ)
+        </p>
+      </div>
+
+      <!-- STEP 1: CUSTOMER FORM -->
+      <div id="modal-step-1" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Họ và Tên của bạn <span class="text-red-400">*</span></label>
+          <div class="relative">
+            <i class="fa-solid fa-user absolute left-3.5 top-3.5 text-slate-400"></i>
+            <input type="text" id="cust-name" placeholder="Nguyễn Văn A" class="w-full pl-10 pr-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition text-sm">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Số điện thoại / Zalo <span class="text-red-400">*</span></label>
+          <div class="relative">
+            <i class="fa-solid fa-phone absolute left-3.5 top-3.5 text-slate-400"></i>
+            <input type="tel" id="cust-phone" placeholder="0912345678" class="w-full pl-10 pr-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition text-sm">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Email nhận tài liệu & Link Zoom <span class="text-red-400">*</span></label>
+          <div class="relative">
+            <i class="fa-solid fa-envelope absolute left-3.5 top-3.5 text-slate-400"></i>
+            <input type="email" id="cust-email" placeholder="email@gmail.com" class="w-full pl-10 pr-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition text-sm">
+          </div>
+        </div>
+
+        <p id="form-error" class="text-xs text-red-400 hidden font-medium text-center"></p>
+
+        <button 
+          onclick="submitStep1()" 
+          class="w-full py-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-display font-extrabold text-lg rounded-xl shadow-lg btn-vip-glow cursor-pointer transition flex items-center justify-center gap-2 mt-4"
+        >
+          <span>TIẾP TỤC ĐỂ NHẬN MÃ QR THANH TOÁN</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <div class="flex items-center justify-center gap-4 text-xs text-slate-400 pt-2">
+          <span class="flex items-center gap-1"><i class="fa-solid fa-shield-check text-emerald-400"></i> Bảo mật 100%</span>
+          <span>•</span>
+          <span class="flex items-center gap-1"><i class="fa-solid fa-bolt text-amber-400"></i> Kích hoạt tức thì</span>
+        </div>
+      </div>
+
+      <!-- STEP 2: VIETQR PAYMENT DISPLAY -->
+      <div id="modal-step-2" class="p-6 space-y-5 hidden">
+        
+        <div class="text-center">
+          <div class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full font-semibold mb-2">
+            <i class="fa-solid fa-qrcode"></i> Quét mã VietQR bằng ứng dụng Ngân hàng
+          </div>
+          <p class="text-xs text-slate-300">
+            Hệ thống tự động kích hoạt tài khoản VIP ngay khi giao dịch thành công.
+          </p>
+        </div>
+
+        <!-- Dynamic QR Code Card -->
+        <div class="bg-white p-3 rounded-2xl shadow-xl w-60 mx-auto text-center border-2 border-emerald-500">
+          <img id="qr-image" src="" alt="Mã thanh toán VietQR" class="w-full h-auto rounded-lg mx-auto">
+          <div class="text-[11px] font-bold text-slate-800 mt-1 uppercase tracking-wide">
+            Quét mã để chuyển khoản nhanh 24/7
+          </div>
+        </div>
+
+        <!-- Bank Details Box -->
+        <div class="bg-slate-900/90 rounded-xl p-4 border border-blue-800/60 space-y-2.5 text-xs sm:text-sm">
+          
+          <div class="flex justify-between items-center py-1 border-b border-slate-800">
+            <span class="text-slate-400">Ngân hàng:</span>
+            <span id="bank-name-display" class="font-bold text-white">MBBank</span>
+          </div>
+
+          <div class="flex justify-between items-center py-1 border-b border-slate-800">
+            <span class="text-slate-400">Số tài khoản:</span>
+            <div class="flex items-center gap-2">
+              <span id="bank-acc-display" class="font-mono font-bold text-amber-300 text-base">039139396868</span>
+              <button onclick="copyToClipboard('bank-acc-display', 'Đã sao chép Số tài khoản!')" class="text-emerald-400 hover:text-emerald-300 p-1" title="Sao chép">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center py-1 border-b border-slate-800">
+            <span class="text-slate-400">Chủ tài khoản:</span>
+            <span id="bank-holder-display" class="font-bold text-white uppercase">NGO MY QUYEN</span>
+          </div>
+
+          <div class="flex justify-between items-center py-1 border-b border-slate-800">
+            <span class="text-slate-400">Số tiền:</span>
+            <span class="font-mono font-bold text-emerald-400 text-base">79.000 VNĐ</span>
+          </div>
+
+          <div class="flex justify-between items-center py-1">
+            <span class="text-slate-400">Nội dung CK:</span>
+            <div class="flex items-center gap-2">
+              <span id="transfer-memo" class="font-mono font-black text-amber-300 text-base bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/40">VIP 0912345678</span>
+              <button onclick="copyToClipboard('transfer-memo', 'Đã sao chép Nội dung chuyển khoản!')" class="text-emerald-400 hover:text-emerald-300 p-1" title="Sao chép">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <button 
+          onclick="confirmPaymentDone()" 
+          class="w-full py-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-display font-extrabold text-base rounded-xl shadow-lg btn-vip-glow cursor-pointer transition flex items-center justify-center gap-2"
+        >
+          <i class="fa-solid fa-circle-check text-xl"></i>
+          <span>TÔI ĐÃ CHUYỂN KHOẢN XONG</span>
+        </button>
+
+        <button onclick="backToStep1()" class="w-full text-center text-xs text-slate-400 hover:text-white transition">
+          <i class="fa-solid fa-arrow-left mr-1"></i> Quay lại sửa thông tin
+        </button>
+
+      </div>
+
+      <!-- STEP 3: SUCCESS CONFIRMATION -->
+      <div id="modal-step-3" class="p-8 text-center space-y-4 hidden">
+        <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-emerald-500/40">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h4 class="text-2xl font-display font-black text-white">
+          Đăng Ký VIP Thành Công!
+        </h4>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Cảm ơn bạn <strong id="success-name" class="text-white"></strong>!<br>
+          Chúng tôi đã ghi nhận thông tin. Đường link phòng Zoom VIP và tài liệu mật sẽ được gửi qua Zalo / Email <strong id="success-email" class="text-emerald-400"></strong> trong ít phút!
+        </p>
+        <div class="bg-blue-950/60 p-4 rounded-xl border border-blue-800 text-left text-xs space-y-2 text-slate-300">
+          <div class="font-bold text-white flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-info text-amber-400"></i> Hướng Dẫn Tiếp Theo:
+          </div>
+          <p>1. Kiểm tra hòm thư Email (kể cả mục Quảng cáo/Spam).</p>
+          <p>2. Chú ý điện thoại để tham gia nhóm Zalo VIP Thử Thách 30 Triệu.</p>
+        </div>
+        <button onclick="closeCheckoutModal()" class="w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm rounded-xl transition cursor-pointer">
+          ĐÓNG LẠI
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl font-semibold text-sm flex items-center gap-2.5 translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <i class="fa-solid fa-circle-check text-lg"></i>
+    <span id="toast-message">Đã sao chép!</span>
+  </div>
+
+  <!-- Floating Mobile CTA Bar -->
+  <div id="mobile-sticky-cta" class="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-brandDarkNavy/95 backdrop-blur-md p-3 border-t border-emerald-500/30 flex items-center justify-between gap-3 shadow-2xl">
+    <div>
+      <div class="text-[11px] text-slate-400 line-through">13.797.000 Đ</div>
+      <div class="text-lg font-black text-amber-300 leading-tight">79.000 VNĐ</div>
+    </div>
+    <button onclick="openCheckoutModal()" class="flex-1 py-3 bg-brandGreen hover:bg-brandGreenHover text-white font-bold text-sm rounded-xl shadow-lg btn-vip-glow flex items-center justify-center gap-2">
+      <i class="fa-solid fa-crown text-amber-300"></i>
+      <span>LẤY VÉ VIP NGAY</span>
+    </button>
+  </div>
+
+  <!-- External App Scripts -->
+  <script src="config.js"></script>
+  <script>
+    // ==========================================
+    // 1. COUNTDOWN TIMER
+    // ==========================================
+    let totalSeconds = (SITE_CONFIG.countdownMinutes || 15) * 60;
+    const timerDisplay = document.getElementById('top-timer');
+
+    function updateCountdown() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // ==========================================
+    // 2. MODAL CONTROLS
+    // ==========================================
+    const checkoutModal = document.getElementById('checkout-modal');
+    const step1 = document.getElementById('modal-step-1');
+    const step2 = document.getElementById('modal-step-2');
+    const step3 = document.getElementById('modal-step-3');
+    const formError = document.getElementById('form-error');
+
+    function openCheckoutModal() {
+      checkoutModal.classList.remove('hidden');
+      checkoutModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCheckoutModal() {
+      checkoutModal.classList.add('hidden');
+      checkoutModal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close on clicking backdrop outside card
+    checkoutModal.addEventListener('click', (e) => {
+      if (e.target === checkoutModal) {
+        closeCheckoutModal();
+      }
+    });
+
+    // ==========================================
+    // 3. STEP 1 -> STEP 2 (GENERATE VIETQR)
+    // ==========================================
+    let currentCustomer = {};
+
+    function submitStep1() {
+      const name = document.getElementById('cust-name').value.trim();
+      const phone = document.getElementById('cust-phone').value.trim();
+      const email = document.getElementById('cust-email').value.trim();
+
+      if (!name) {
+        showError('Vui lòng nhập Họ và Tên của bạn.');
+        return;
+      }
+      if (!phone || phone.length < 9) {
+        showError('Vui lòng nhập Số điện thoại hợp lệ.');
+        return;
+      }
+      if (!email || !email.includes('@')) {
+        showError('Vui lòng nhập Email hợp lệ để nhận link Zoom.');
+        return;
+      }
+
+      formError.classList.add('hidden');
+      currentCustomer = { name, phone, email };
+
+      // Update bank info displays from config
+      document.getElementById('bank-name-display').textContent = SITE_CONFIG.bankInfo.bankName;
+      document.getElementById('bank-acc-display').textContent = SITE_CONFIG.bankInfo.accountNumber;
+      document.getElementById('bank-holder-display').textContent = SITE_CONFIG.bankInfo.accountHolder;
+
+      // Transfer Memo: VIP <PHONE>
+      const memo = `${SITE_CONFIG.bankInfo.transferPrefix} ${phone}`;
+      document.getElementById('transfer-memo').textContent = memo;
+
+      // Generate VietQR URL
+      const bankId = SITE_CONFIG.bankInfo.bankId;
+      const accNo = SITE_CONFIG.bankInfo.accountNumber;
+      const amount = SITE_CONFIG.rawVipPrice;
+      const holder = encodeURIComponent(SITE_CONFIG.bankInfo.accountHolder);
+      const encodedMemo = encodeURIComponent(memo);
+
+      // Using official VietQR API image format
+      const vietQrUrl = `https://img.vietqr.io/image/${bankId}-${accNo}-compact2.png?amount=${amount}&addInfo=${encodedMemo}&accountName=${holder}`;
+      document.getElementById('qr-image').src = vietQrUrl;
+
+      // Switch to Step 2
+      step1.classList.add('hidden');
+      step2.classList.remove('hidden');
+
+      // Send to webhook in background if configured
+      sendWebhook('lead_registration');
+    }
+
+    function sendWebhook(statusEvent) {
+      if (!SITE_CONFIG.webhookUrl) return;
+      try {
+        const payload = {
+          event: statusEvent,
+          name: currentCustomer.name || '',
+          phone: currentCustomer.phone || '',
+          email: currentCustomer.email || '',
+          course: SITE_CONFIG.courseName,
+          price: SITE_CONFIG.vipPrice + ' ' + SITE_CONFIG.currency,
+          memo: `${SITE_CONFIG.bankInfo.transferPrefix} ${currentCustomer.phone || ''}`,
+          time: new Date().toLocaleString('vi-VN')
+        };
+        fetch(SITE_CONFIG.webhookUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(err => console.log('Webhook error:', err));
+      } catch (e) {
+        console.log('Webhook exception:', e);
+      }
+    }
+
+    function showError(msg) {
+      formError.textContent = msg;
+      formError.classList.remove('hidden');
+    }
+
+    function backToStep1() {
+      step2.classList.add('hidden');
+      step1.classList.remove('hidden');
+    }
+
+    function confirmPaymentDone() {
+      document.getElementById('success-name').textContent = currentCustomer.name || 'bạn';
+      document.getElementById('success-email').textContent = currentCustomer.email || 'Email của bạn';
+
+      step2.classList.add('hidden');
+      step3.classList.remove('hidden');
+
+      sendWebhook('payment_confirmed');
+      showToast('Đã ghi nhận yêu cầu nâng cấp VIP thành công!');
+    }
+
+    // ==========================================
+    // 4. UTILITIES: COPY & TOAST
+    // ==========================================
+    function copyToClipboard(elementId, successMsg) {
+      const text = document.getElementById(elementId).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(successMsg);
+      }).catch(() => {
+        // Fallback
+        const temp = document.createElement('textarea');
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        showToast(successMsg);
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
